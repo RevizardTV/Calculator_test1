@@ -25,6 +25,10 @@ function operationEnterNumbers(op){
     {
         storedNums+="-"+currentString;
     }
+    else if(storedNums==="")
+    {
+        storedNums+=currentString;
+    }
     else
     {
         storedNums+=op+currentString;
