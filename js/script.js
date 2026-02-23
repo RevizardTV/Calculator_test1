@@ -19,7 +19,7 @@ const insertNumber=(sentNumber)=>{
     console.log("insertNumber called:",displayNum);
 }
 
-const operationEnterNumbers=(op)=>{
+function operationEnterNumbers(op){
     let currentString=displayNum.toString();
     if(op==='-' && storedNums==="")
     {
