@@ -110,6 +110,7 @@ const divideNumbers=()=>{
 let displayNum=0;
 let storedNums="";
 let result=0;
+let valueNumbered=0;
 //Node linking
 const displayStoredValue=document.getElementById("storedNum");
 const displayCurrentValue=document.getElementById("calcNum");
@@ -137,11 +138,11 @@ keypad.addEventListener("click",(event)=>{
         const value=event.target.innerText;
         if(displayNum<0)
         {
-            const valueNumbered=Number(-value);
+            valueNumbered=Number(-value);
         }
         else
         {
-             const valueNumbered=Number(value);
+             valueNumbered=Number(value);
         }
         if(!(Number.isNaN(valueNumbered)))
         {
