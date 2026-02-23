@@ -135,13 +135,16 @@ consoleButton.addEventListener("click",consoleChecker);
 keypad.addEventListener("click",(event)=>{
     if(event.target.classList.contains("buttonItems")){
         const value=event.target.innerText;
-        const valueNumbered=Number(value);
+        if(displayNum<0)
+        {
+            const valueNumbered=Number(-value);
+        }
+        else
+        {
+             const valueNumbered=Number(value);
+        }
         if(!(Number.isNaN(valueNumbered)))
         {
-            if(displayNum<0)
-            {
-                valueNumbered*=-1;
-            }
             console.log("VALUE NUMBER CALLED:",valueNumbered);
             insertNumber(valueNumbered);
             
