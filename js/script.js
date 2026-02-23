@@ -1,7 +1,7 @@
 //Functions
 
 const consoleChecker=()=>{
-    console.log("Commit 3");
+    console.log("DisplayNum:",displayNum,"\nStoredNums:",storedNums);
 }
 
 const resetter=()=>{
