@@ -1,7 +1,3 @@
-//Importing
-import { create, all } from 'https://unpkg.com/mathjs@11.8.0/lib/esm/index.js'
-const math = create(all)
-
 //Functions
 
 const consoleChecker=()=>{
@@ -43,16 +39,17 @@ const operationEnterNumbers=(op)=>{
     setStored(storedNums);
 }
 
-const calculate = (problem) => {
-    try {
-        // Math.js automatically understands order of operations (PEMDAS)
-        const result = math.evaluate(problem);
-        displayCurrentValue.innerText = result;
-    } catch (error) {
-        displayCurrentValue.innerText = "Error";
-        console.error("Math Error:", error);
+const equateNumbers=()=>{
+    if(!(storedNums===""))
+    {
+        result=new Function(`return ${storedNums}`)();
+        setDisplay(result);
+
     }
-};
+    storedNums="";
+    console.log(result);
+    setStored("");
+}
 //Archived
 /*
     
@@ -157,12 +154,12 @@ keypad.addEventListener("click",(event)=>{
         {
             case '+':
             case '-':
-            case '//':
+            case '/':
             case '*':
                 operationEnterNumbers(value);
                 break;
             case '=':
-                calculate(storedNums);
+                equateNumbers();
             default:
                 console.log("Default condition reached");
                 break;
