@@ -154,7 +154,7 @@ keypad.addEventListener("click",(event)=>{
         {
             case '+':
             case '-':
-            case '/':
+            case '//':
             case '*':
                 operationEnterNumbers(value);
                 break;
