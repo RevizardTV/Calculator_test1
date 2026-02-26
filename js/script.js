@@ -151,19 +151,22 @@ keypad.addEventListener("click",(event)=>{
             insertNumber(valueNumbered);
             
         }
-        switch(value)
-        {
-            case '+':
-            case '-':
-            case '/':
-            case '*':
-                operationEnterNumbers(value);
-                break;
-            case '=':
-                equateNumbers();
-            default:
-                console.log("Default condition reached");
-                break;
+        else{
+            switch(value)
+            {
+                case '+':
+                case '-':
+                case '/':
+                case '*':
+                    operationEnterNumbers(value);
+                    break;
+                case '=':
+                    equateNumbers();
+                    break;
+                default:
+                    console.log("Default condition reached");
+                    break;
+            }
         }
     }
 })
